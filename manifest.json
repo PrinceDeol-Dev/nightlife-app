@@ -1,0 +1,9 @@
+{
+  "name": "Nightly – Partys entdecken",
+  "short_name": "Nightly",
+  "description": "Entdecke Clubs, Bars und Veranstaltungen in Deutschland.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101014",
+  "theme_color": "#101014"
+}

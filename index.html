@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101014"><title>Nightly – Partys entdecken</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span>✦</span> nightly</div><button id="loginBtn" class="outline">Anmelden</button></header>
+<main>
+<section class="hero"><div class="eyebrow">DEINE NACHT. DEINE STADT.</div><h1>Wo geht heute<br><span>was?</span></h1><p>Entdecke Clubs, Bars und Events in ganz Deutschland.</p><div class="search-row"><input id="cityInput" type="search" placeholder="Stadt eingeben, z. B. Hamburg" aria-label="Stadt suchen"><button id="searchBtn" class="primary">Suchen</button></div><div class="quick-cities"><button data-city="Berlin">Berlin</button><button data-city="Hamburg">Hamburg</button><button data-city="Köln">Köln</button><button data-city="Wilhelmshaven">Wilhelmshaven</button></div></section>
+<section class="section-head"><div><div class="eyebrow">FÜR DEINEN NÄCHSTEN ABEND</div><h2>Events entdecken</h2></div><span id="resultCount" class="muted"></span></section>
+<div class="filters"><select id="categoryFilter"><option value="Alle">Alle Kategorien</option><option>Club</option><option>Bar</option><option>Live-Musik</option><option>Party</option></select><select id="crowdFilter"><option value="Alle">Jede Auslastung</option><option>Wenig los</option><option>Gut besucht</option><option>Sehr voll</option></select><select id="priceFilter"><option value="Alle">Alle Preise</option><option value="Kostenlos">Kostenlos</option><option value="Bezahlt">Mit Eintritt</option></select></div>
+<section id="eventGrid" class="event-grid" aria-live="polite"></section>
+<section class="organizer"><div class="plus">＋</div><div class="organizer-copy"><h3>Du veranstaltest etwas?</h3><p>Trage deine Veranstaltung kostenlos ein. Später können Veranstalter automatisch gefundene Events übernehmen.</p></div><button id="addEventBtn" class="outline">Event eintragen</button></section>
+<p class="prototype-note">Prototyp mit Beispieldaten. Noch keine echten Veranstaltungen, Konten oder Live-Auslastungsdaten.</p>
+</main>
+<nav class="bottom-nav"><a class="active" href="#">⌕<span>Entdecken</span></a><button id="friendsBtn">♡<span>Freunde</span></button><button id="savedBtn">☆<span>Merkliste</span></button><button id="profileBtn">○<span>Profil</span></button></nav>
+<dialog id="eventDialog"><form id="eventForm"><div class="dialog-head"><h2>Event eintragen</h2><button type="button" id="closeDialog" class="close">×</button></div><p class="hint">Im Prototyp wird der Eintrag nur vorläufig im Browser angezeigt.</p><label>Veranstaltungsname<input name="title" required placeholder="z. B. Saturday Night"></label><div class="two-cols"><label>Stadt<input name="city" required placeholder="Hamburg"></label><label>Datum<input name="date" type="date" required></label></div><label>Club oder Bar<input name="venue" required placeholder="Name des Veranstaltungsorts"></label><label>Event-Link (optional)<input name="url" type="url" placeholder="https://..."></label><button class="primary full" type="submit">Vorschau hinzufügen</button></form></dialog><div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
